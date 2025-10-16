@@ -1,6 +1,6 @@
 # DevOps Stage 0
 
-**Name:** Obed Gaiya  
-**Slack Username:** @darkmode  
+**Name:** Obed Mathias Gaiya  
+**Slack Username:** @DarkMode  
 **Description:** Simple NGINX deployment serving a custom web page for HNG13 DevOps Stage 0  
-**Server IP/Domain:** http://your-server-ip/ (add this after deployment)
+**Server IP/Domain:** http://172.236.22.41/ (add this after deployment)

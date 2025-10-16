@@ -1,0 +1,36 @@
+name: Stage 0 - DevOps Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Verify required files exist
+        run: |
+          echo "🔍 Checking project files..."
+          if [ ! -f README.md ]; then
+            echo "❌ README.md is missing!"
+            exit 1
+          fi
+          if [ ! -f index.html ]; then
+            echo "❌ index.html is missing!"
+            exit 1
+          fi
+          echo "✅ All required files are present!"
+
+      - name: Display project info
+        run: |
+          echo "🚀 DevOps Stage 0 Validation Successful!"
+          echo "👤 Developer: [Your Name]"
+          echo "💬 Slack Username: [YourSlackUsername]"
+          echo "🌐 Server: http://[YourServerIP or Domain]/"
